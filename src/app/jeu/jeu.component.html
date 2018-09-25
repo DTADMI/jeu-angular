@@ -1,0 +1,16 @@
+<!--mat-form-field>
+  <input matInput placeholder="Add new task" #newtaskinput>
+</mat-form-field-->
+<button *ngIf="!pret" mat-raised-button color="primary" (click)="creerTableau(5)">Créer tableau</button>
+<!--mat-card *ngIf="puces.length > 0">
+  <mat-list>
+    <mat-list-item *ngFor="let puce of puces;let i = index">
+      <mat-divider *ngIf="i != 0"></mat-divider>
+      <mat-slide-toggle (change)="toggle(puce)" [checked]="!!puce.found" color="primary">
+        <span [ngClass]="{found:puce.found}">{{puce.couleur}}</span>
+      </mat-slide-toggle>
+    </mat-list-item>
+  </mat-list>
+</mat-card-->
+<!--span class="dot"></span-->
+<jeu-grid [(tableau)]="tableau" ></jeu-grid>

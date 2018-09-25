@@ -1,0 +1,17 @@
+<div tableau="tableau" *ngIf="tableau.length > 0">
+  <!--mat-table [dataSource]="dataSource">
+    <svg height={{hauteur}} width={{largeur}}>
+      <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill={{puce.couleur}} />
+    </svg>
+  </mat-table-->
+  <table>
+    <tbody>
+      <tr *ngFor="let row of tableau;let i = index">
+        <puce-component *ngFor="let puce of row;let j = index" [couleur]="puce.couleur"
+                        [full]="puce.full" [found]="puce.found" [couleurOff]="puce.couleurOff"
+                        [couleurOn]="puce.couleurOn"
+        ></puce-component>
+      </tr>
+    </tbody>
+  </table>
+</div>
